@@ -11,12 +11,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, PropType } from 'vue'
+//when we want to apply custom types to props, we need the built-in helper method called PropTypes.
+import { EventItem } from '../types'
 
 export default defineComponent({
   props: {
     event: {
-      type: Object,
+      type: Object as PropType<EventItem>,
       required: true
     }
   }
